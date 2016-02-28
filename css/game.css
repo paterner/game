@@ -94,13 +94,48 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   position: inherit;
 }
 
+
+/*game*/
 .page1 {
   background-image: url('../img/gamebgOne.jpg');
   background-repeat:no-repeat;
   background-size:cover;
+  text-align: center;
 }
 .page2 {
   background-image: url('../img/gamebgTwo.jpg');
   background-repeat:no-repeat;
   background-size:cover;
+}
+
+.header {
+  height: 52px;
+  line-height:52px;
+  color: #fff;
+  background-color: #2d3a43;
+  position: fixed; 
+  width: 100%;
+  z-index: 100;
+}
+
+.gamelogo {
+  margin-left: 20%;
+  float: left;
+}
+
+.headerRight{
+  float: right;
+}
+
+.headerRight a{
+  display: block;
+  float: left;
+}
+
+.gotogame{
+  float: right
+}
+
+.gametitle{
+  margin-top: 100px
 }
