@@ -369,3 +369,45 @@ img.gamenextbtn{
 }
 
 .gameinfoh5{width: 90%}
+
+
+.game_fly_two{margin-top: -70px}
+.game_fly{
+  transform: translate3d(0,1500px,0);
+  -ms-transform: translate3d(0,1500px,0);  /* IE 9 */
+  -webkit-transform: translate3d(0,1500px,0); /* Safari and Chrome */
+  -o-transform: translate3d(0,1500px,0);    /* Opera */
+  -moz-transform:translate3d(0,1500px,0);  
+}
+
+.fly
+{
+animation: fly 2s forwards;
+-moz-animation: fly 2s forwards; /* Firefox */
+-webkit-animation: fly 2s forwards;  /* Safari 和 Chrome */
+-o-animation: fly 2s forwards; /* Opera */
+}
+
+@keyframes fly
+{
+from {transform: translate3d(0,1500px,0);}
+to {transform: translate3d(0,0,0);}
+}
+
+@-moz-keyframes fly /* Firefox */
+{
+from {transform: translate3d(0,1500px,0);}
+to {transform: translate3d(0,0,0);}
+}
+
+@-webkit-keyframes fly /* Safari 和 Chrome */
+{
+from {transform: translate3d(0,1500px,0);}
+to {transform: translate3d(0,0,0);}
+}
+
+@-o-keyframes fly /* Opera */
+{
+from {transform: translate3d(0,1500px,0);}
+to {transform: translate3d(0,0,0);}
+}

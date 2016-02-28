@@ -16,8 +16,14 @@ $(function(){
 		afterMove: function(index){
 			if(index===1){
 				$('.gametitle_h5_one').addClass('fly')
+			}else if(index===2){
+				$('.game_fly_one').addClass('fly')
+				window.setTimeout(function(){
+					$('.game_fly_two').addClass('fly')
+				},500)
+				
 			}else{
-				//alert(2)
+
 			}
 		}
 	});
@@ -52,8 +58,8 @@ $(function(){
 	</div>
 	<div class="page page2_h5">
 		<div class="mb5">
-			<img src="img/gameIntro1.png" alt="">
-			<img src="img/gameIntro2.png" alt="">
+			<img src="img/gameIntro1_h5.png" alt="" class="game_fly game_fly_one">
+			<img src="img/gameIntro2_h5.png" alt="" class="game_fly game_fly_two">
 			<div>
 				<img src="img/gameNextBtn.png" alt="" class="gamenextbtn">
 			</div>
