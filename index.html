@@ -22,6 +22,13 @@ $(function(){
 		$(this).removeClass('over');
 		$('.code2').hide();
 	});
+
+	$('.gameNextBtn').click(function(){
+		$('.main').moveDown();
+	})
+	$('.gamePreBtn').click(function(){
+		$('.main').moveUp();
+	})
 });
 </script>
 </head>
