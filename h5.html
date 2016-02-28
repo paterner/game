@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+<title>game</title>
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/game.css" />
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery.onepage-scroll.min.js"></script>
+<script>
+$(function(){
+	$('.main').onepage_scroll({
+		sectionContainer: '.page',
+		pagination: false,
+		afterMove: function(index){
+			if(index===1){
+				$('.gametitle_h5_one').addClass('fly')
+			}else{
+				alert(2)
+			}
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header">
+	<img src="img/gamelogo.png" alt="战舰世界" class="gamelogo gamelogo_h5">
+	<div class="headerRight clearfix">
+		关注我们：
+		<a href=""></a>
+		<a href=""></a>
+		<a href=""></a>
+		<a href=""></a>
+		<div class="gotogame"></div>
+	</div>
+</div>
+<div class="main">
+	<div class="page page1_h5">
+		<div class="mb5">
+			<img src="img/h5_title.png" alt="" class="gametitle gamelogo_h5 gametitle_h5_one">
+			<img src="img/h5_title2.png" alt="" class="gametitle gamelogo_h5 gametitle_h5_two">
+			<img src="img/h5_title3.png" alt="" class="gametitle gamelogo_h5 gametitle_h5_three">
+			<img src="img/gameIndexBtn.png" alt="" class="gemeindexbtn">
+			<div>
+				<img src="img/gameNextBtn.png" alt="" class="gamenextbtn">
+			</div>
+		</div>
+	</div>
+	<div class="page page2_h5">
+		<div class="mb5">
+			<img src="img/gameIntro1.png" alt="">
+			<img src="img/gameIntro2.png" alt="">
+			<div>
+				<img src="img/gameNextBtn.png" alt="" class="gamenextbtn">
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

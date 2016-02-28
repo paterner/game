@@ -139,3 +139,69 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 .gametitle{
   margin-top: 100px
 }
+
+
+/*h5*/
+.mb5{margin-bottom: 5px;}
+
+.page1_h5{
+  background-image: url('../img/h5_page1.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  text-align: center;
+  -webkit-align-items:flex-end;
+  align-items:flex-end;
+  display: flex;
+  display: -webkit-flex;
+}
+.page2_h5{
+  background-image: url('../img/h5_page2.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  text-align: center;
+  -webkit-align-items:flex-end;
+  align-items:flex-end;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.page2_h5 img{
+  width: 100%;
+}
+
+.gamelogo.gamelogo_h5{
+  width: 90px;
+  height: 105px;
+  margin-left: 10%;
+  margin-top: 0px;
+}
+
+.gametitle.gamelogo_h5{
+  margin-top: 0;
+}
+
+.gametitle.gametitle_h5_one{
+  width: 40%
+}
+
+.gametitle.gametitle_h5_two{
+  width: 90%
+}
+
+.gametitle.gametitle_h5_three{
+  width: 90%
+}
+
+.gametitle_h5_one,.gametitle_h5_two,.gametitle_h5_three {
+ 
+}
+
+.gemeindexbtn{
+  width: 50%;
+  margin-top: 20px
+}
+
+img.gamenextbtn{
+  width: 45px;
+  margin-top: 20px;
+}
