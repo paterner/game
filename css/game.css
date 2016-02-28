@@ -359,7 +359,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   margin-top: 20px
 }
 
-img.gamenextbtn{
+img.gamenextbtn, img.gameprebtn{
   width: 45px;
   margin-top: 20px;
 }
@@ -381,9 +381,13 @@ img.gamenextbtn{
 
 .gameinfoh5{width: 90%}
 
+.gametitle ,.gemeindexbtn{
+  opacity: 0
+}
+
 .animate_one{
-  animation:animate_one 1s;
-  -webkit-animation:animate_one 1s;
+  animation:animate_one 1s forwards;
+  -webkit-animation:animate_one 1s forwards;
 }
 @keyframes animate_one {
   from {
@@ -402,8 +406,8 @@ img.gamenextbtn{
   }
 }
 .animate_two{
-  animation:animate_two 1s;
-  -webkit-animation:animate_two 1s;
+  animation:animate_two 1s forwards;
+  -webkit-animation:animate_two 1s forwards;
 }
 @keyframes animate_two {
   from {
@@ -415,15 +419,15 @@ img.gamenextbtn{
 }
 @-webkit-keyframes animate_two {
   from {
-    -webkit-transform: translate3d(-190,0,0);
+    -webkit-transform: translate3d(-190%,0,0);
   }
   to {
     -webkit-transform: translate3d(0,0,0);
   }
 }
 .animate_three{
-  animation:animate_three 1s;
-  -webkit-animation:animate_three 1s;
+  animation:animate_three 1s forwards;
+  -webkit-animation:animate_three 1s forwards;
 }
 @keyframes animate_three {
   from {
@@ -443,42 +447,31 @@ img.gamenextbtn{
 }
 
 .game_fly_two{margin-top: -70px}
-.game_fly{
-  transform: translate3d(0,1500px,0);
-  -ms-transform: translate3d(0,1500px,0);  /* IE 9 */
-  -webkit-transform: translate3d(0,1500px,0); /* Safari and Chrome */
-  -o-transform: translate3d(0,1500px,0);    /* Opera */
-  -moz-transform:translate3d(0,1500px,0);  
-}
+.game_fly{opacity: 0}
 
 .fly
 {
-animation: fly 2s forwards;
--moz-animation: fly 2s forwards; /* Firefox */
--webkit-animation: fly 2s forwards;  /* Safari 和 Chrome */
--o-animation: fly 2s forwards; /* Opera */
+animation: fly 1s forwards linear;
+-moz-animation: fly 1s forwards linear; /* Firefox */
+-webkit-animation: fly 1s forwards linear;  /* Safari 和 Chrome */
+-o-animation: fly 1s forwards linear; /* Opera */
 }
 
 @keyframes fly
 {
-from {transform: translate3d(0,1500px,0);}
-to {transform: translate3d(0,0,0);}
+0% {transform: translate3d(0,100px,0);}
+25% {transform: translate3d(0,-100px,0);}
+50% {transform: translate3d(0,-50px,0);}
+75% {transform: translate3d(0,-25px,0);}
+100% {transform: translate3d(0,0,0);}
 }
 
-@-moz-keyframes fly /* Firefox */
-{
-from {transform: translate3d(0,1500px,0);}
-to {transform: translate3d(0,0,0);}
-}
 
 @-webkit-keyframes fly /* Safari 和 Chrome */
 {
-from {transform: translate3d(0,1500px,0);}
-to {transform: translate3d(0,0,0);}
-}
-
-@-o-keyframes fly /* Opera */
-{
-from {transform: translate3d(0,1500px,0);}
-to {transform: translate3d(0,0,0);}
+0% {transform: translate3d(0,100px,0);}
+25% {transform: translate3d(0,-100px,0);}
+50% {transform: translate3d(0,-50px,0);}
+75% {transform: translate3d(0,-25px,0);}
+100% {transform: translate3d(0,0,0);}
 }

@@ -6,54 +6,6 @@
 <title>game</title>
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/game.css" />
-<script src="js/jquery-1.9.0.min.js"></script>
-<script src="js/jquery.onepage-scroll.min.js"></script>
-<script>
-$(function(){
-	//预加载所有图片
-	var imgsrc = ['h5_page1.jpg','h5_page2.jpg','h5_page3.jpg','gamelogo.png','gameIndexBtn.png','h5_title.png','h5_title2.png','h5_title3.png','gameNextBtn.png','gameIntro1.png','gameIntro2.png','gameInfoH5.png','gameTag1.png','gameTag2.png','gameTag3.png','gameTag4.png','gameWeixin.png','gamePreBtn.png','gameSocialIcon.png'],imgscount = imgsrc.length,imgsnow = 0,imgobj = [];
-	for(var i = 0;i<imgscount;i++){
-		imgobj[i] = new Image();
-		imgobj[i].onload =function(){
-			imgsnow++;
-			if(imgsnow == imgscount){
-				pageAnimation();
-			}
-		}
-		imgobj[i].onerror =function(){
-			imgsnow++;
-			if(imgsnow == imgscount){
-				pageAnimation();
-			}
-		}	
-		imgobj[i].src = "http://"+window.location.host+window.location.pathname.replace(/[^\/]*$/,"")+"images/"+imgsrc[i];
-	}
-	function pageAnimation() {
-		$('.gametitle_h5_one').addClass('animate_one');
-		$('.gametitle_h5_two').addClass('animate_two');
-		$('.gametitle_h5_three').addClass('animate_three');
-	}
-	$('.main').onepage_scroll({
-		sectionContainer: '.page',
-		pagination: false,
-		afterMove: function(index){
-			if(index===1){
-				$('.gametitle_h5_one').addClass('animate_one');
-				$('.gametitle_h5_two').addClass('animate_two');
-				$('.gametitle_h5_three').addClass('animate_three');
-			}else if(index===2){
-				$('.game_fly_one').addClass('fly')
-				window.setTimeout(function(){
-					$('.game_fly_two').addClass('fly')
-				},500)
-				
-			}else{
-
-			}
-		},
-	});
-});
-</script>
 </head>
 
 <body>
@@ -103,10 +55,73 @@ $(function(){
 				<img src="img/gameWeixin.png" alt="">
 			</div>
 			<div>
-				<img src="img/gamePreBtn.png" alt="" class="gamenextbtn">
+				<img src="img/gamePreBtn.png" alt="" class="gameprebtn">
 			</div>
 		</div>
 	</div>
 </div>
 </body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery.onepage-scroll.min.js"></script>
+<script>
+$(function(){
+	//预加载所有图片
+	var imgsrc = ['h5_page1.jpg','h5_page2.jpg','h5_page3.jpg','gamelogo.png','gameIndexBtn.png','h5_title.png','h5_title2.png','h5_title3.png','gameNextBtn.png','gameIntro1.png','gameIntro2.png','gameInfoH5.png','gameTag1.png','gameTag2.png','gameTag3.png','gameTag4.png','gameWeixin.png','gamePreBtn.png','gameSocialIcon.png'],imgscount = imgsrc.length,imgsnow = 0,imgobj = [];
+	for(var i = 0;i<imgscount;i++){
+		imgobj[i] = new Image();
+		imgobj[i].onload =function(){
+			imgsnow++;
+			if(imgsnow == imgscount){
+				pageAnimation();
+			}
+		}
+		imgobj[i].onerror =function(){
+			imgsnow++;
+			if(imgsnow == imgscount){
+				pageAnimation();
+			}
+		}	
+		imgobj[i].src = "http://"+window.location.host+window.location.pathname.replace(/[^\/]*$/,"")+"images/"+imgsrc[i];
+	}
+	function pageAnimation() {
+		$('.gametitle, .gemeindexbtn').css('opacity', 1)
+		$('.gametitle_h5_one').addClass('animate_one');
+		$('.gametitle_h5_two').addClass('animate_two');
+		$('.gametitle_h5_three').addClass('animate_three');
+	}
+	function removeClass() {
+		$('.gametitle, .gemeindexbtn').css('opacity', 0)
+		$('.gametitle_h5_one').removeClass('animate_one');
+		$('.gametitle_h5_two').removeClass('animate_two');
+		$('.gametitle_h5_three').removeClass('animate_three');
+	}
+	$('.main').onepage_scroll({
+		sectionContainer: '.page',
+		pagination: false,
+		afterMove: function(index){
+			if(index===1){
+				$('.game_fly').css('opacity', 0)
+				$('.game_fly').removeClass('fly')
+				pageAnimation()
+			}else if(index===2){
+				removeClass()
+				$('.game_fly_one').css('opacity', 1).addClass('fly')
+				window.setTimeout(function(){
+					$('.game_fly_two').css('opacity', 1).addClass('fly')
+				},1000)
+			}else{
+				removeClass()
+				$('.game_fly').css('opacity', 0)
+				$('.game_fly').removeClass('fly')
+			}
+		},
+	});
+	$('.gamenextbtn').click(function(){
+		$('.main').moveDown();
+	})
+	$('.gameprebtn').click(function(){
+		$('.main').moveUp();
+	})
+});
+</script>
 </html>

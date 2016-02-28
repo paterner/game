@@ -5,32 +5,6 @@
 <title>game</title>
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/game.css" />
-<script src="js/jquery-1.9.0.min.js"></script>
-<script src="js/jquery.onepage-scroll.min.js"></script>
-<script>
-$(function(){
-	$('.main').onepage_scroll({
-		sectionContainer: '.page',
-		pagination: false,
-	});
-	$('.socialIcon').on('mouseover', function() {
-		$(this).addClass('over');
-		if($(this).hasClass('wx')) {
-			$('.code2').show();	
-		}
-	}).on('mouseout', function() {
-		$(this).removeClass('over');
-		$('.code2').hide();
-	});
-
-	$('.gameNextBtn').click(function(){
-		$('.main').moveDown();
-	})
-	$('.gamePreBtn').click(function(){
-		$('.main').moveUp();
-	})
-});
-</script>
 </head>
 
 <body>
@@ -70,4 +44,30 @@ $(function(){
 	</div>
 </div>
 </body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery.onepage-scroll.min.js"></script>
+<script>
+$(function(){
+	$('.main').onepage_scroll({
+		sectionContainer: '.page',
+		pagination: false,
+	});
+	$('.socialIcon').on('mouseover', function() {
+		$(this).addClass('over');
+		if($(this).hasClass('wx')) {
+			$('.code2').show();	
+		}
+	}).on('mouseout', function() {
+		$(this).removeClass('over');
+		$('.code2').hide();
+	});
+
+	$('.gameNextBtn').click(function(){
+		$('.main').moveDown();
+	})
+	$('.gamePreBtn').click(function(){
+		$('.main').moveUp();
+	})
+});
+</script>
 </html>
