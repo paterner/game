@@ -328,7 +328,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 }
 
 .gametitle.gametitle_h5_one{
-  width: 40%
+  width: 40%;
 }
 
 .gametitle.gametitle_h5_two{
@@ -369,3 +369,18 @@ img.gamenextbtn{
 }
 
 .gameinfoh5{width: 90%}
+
+.animate_one{
+  animation:animate_one 1s;
+  -webkit-animation:animate_one 1s;
+}
+@keyframes animate_one {
+  from {
+    transform: translate3d(190%,0,0);
+    -webkit-transform: translate3d(190%,0,0);
+  }
+  to {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+}

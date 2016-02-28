@@ -10,16 +10,39 @@
 <script src="js/jquery.onepage-scroll.min.js"></script>
 <script>
 $(function(){
+	//预加载所有图片
+	var imgsrc = ['h5_page1.jpg','h5_page2.jpg','h5_page3.jpg','gamelogo.png','gameIndexBtn.png','h5_title.png','h5_title2.png','h5_title3.png','gameNextBtn.png','gameIntro1.png','gameIntro2.png','gameInfoH5.png','gameTag1.png','gameTag2.png','gameTag3.png','gameTag4.png','gameWeixin.png','gamePreBtn.png','gameSocialIcon.png'],imgscount = imgsrc.length,imgsnow = 0,imgobj = [];
+	for(var i = 0;i<imgscount;i++){
+		imgobj[i] = new Image();
+		imgobj[i].onload =function(){
+			imgsnow++;
+			if(imgsnow == imgscount){
+				pageAnimation();
+			}
+		}
+		imgobj[i].onerror =function(){
+			imgsnow++;
+			if(imgsnow == imgscount){
+				pageAnimation();
+			}
+		}	
+		imgobj[i].src = "http://"+window.location.host+window.location.pathname.replace(/[^\/]*$/,"")+"images/"+imgsrc[i];
+	}
+	function pageAnimation() {
+		$('.gametitle_h5_one').addClass('animate_one');
+	}
 	$('.main').onepage_scroll({
 		sectionContainer: '.page',
 		pagination: false,
 		afterMove: function(index){
 			if(index===1){
-				$('.gametitle_h5_one').addClass('fly')
+				$('.gametitle_h5_one').addClass('animate_one');
+				$('.gametitle_h5_two').addClass('animate_two');
+				$('.gametitle_h5_three').addClass('animate_three');
 			}else{
 				//alert(2)
 			}
-		}
+		},
 	});
 });
 </script>
