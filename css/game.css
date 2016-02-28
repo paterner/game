@@ -265,6 +265,20 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 }
 
 /*h5*/
+.headerRight.headerRight_h5 span{
+  font-size: 12px
+}
+.headerRight.headerRight_h5 span.socialIcon{
+  width: 25px;
+}
+.headerRight.headerRight_h5 span a{
+  width: 18px;
+  height: 18px;
+  margin: 10px 4px 0px 0px;
+  background-size: 13.5px 145px;
+  -webkit-background-size: 13.5px 145px;
+}
+
 .mb5{margin-bottom: 5px;}
 
 .page1_h5{
@@ -288,6 +302,16 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   display: -webkit-flex;
 }
 
+.page3_h5{
+  background-image: url('../img/h5_page3.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  text-align: center;
+  -webkit-align-items:flex-end;
+  align-items:flex-end;
+  display: flex;
+  display: -webkit-flex;
+}
 .page2_h5 img{
   width: 100%;
 }
@@ -329,4 +353,17 @@ img.gamenextbtn{
   margin-top: 20px;
 }
 
-
+.page3_h5_list a{
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+.page3_h5_list a img{
+  width: 100%
+}
+.page3_h5_weixin{
+  margin-top: 50px;
+}
+.page3_h5_weixin img{
+  width: 30%
+}
