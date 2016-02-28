@@ -30,6 +30,8 @@ $(function(){
 	}
 	function pageAnimation() {
 		$('.gametitle_h5_one').addClass('animate_one');
+		$('.gametitle_h5_two').addClass('animate_two');
+		$('.gametitle_h5_three').addClass('animate_three');
 	}
 	$('.main').onepage_scroll({
 		sectionContainer: '.page',
@@ -39,8 +41,14 @@ $(function(){
 				$('.gametitle_h5_one').addClass('animate_one');
 				$('.gametitle_h5_two').addClass('animate_two');
 				$('.gametitle_h5_three').addClass('animate_three');
+			}else if(index===2){
+				$('.game_fly_one').addClass('fly')
+				window.setTimeout(function(){
+					$('.game_fly_two').addClass('fly')
+				},500)
+				
 			}else{
-				//alert(2)
+
 			}
 		},
 	});
@@ -66,8 +74,8 @@ $(function(){
 		<div class="mb5">
 			<img src="img/h5_title.png" alt="" class="gametitle gamelogo_h5 gametitle_h5_one">
 			<img src="img/h5_title2.png" alt="" class="gametitle gamelogo_h5 gametitle_h5_two">
-			<img src="img/h5_title3.png" alt="" class="gametitle gamelogo_h5 gametitle_h5_three">
-			<img src="img/gameIndexBtn.png" alt="" class="gemeindexbtn">
+			<img src="img/h5_title3.png" alt="" class="gametitle gamelogo_h5 gametitle_h5_two">
+			<img src="img/gameIndexBtn.png" alt="" class="gemeindexbtn gametitle_h5_three">
 			<div>
 				<img src="img/gameNextBtn.png" alt="" class="gamenextbtn">
 			</div>
@@ -75,8 +83,8 @@ $(function(){
 	</div>
 	<div class="page page2_h5">
 		<div class="mb5">
-			<img src="img/gameIntro1.png" alt="">
-			<img src="img/gameIntro2.png" alt="">
+			<img src="img/gameIntro1_h5.png" alt="" class="game_fly game_fly_one">
+			<img src="img/gameIntro2_h5.png" alt="" class="game_fly game_fly_two">
 			<div>
 				<img src="img/gameNextBtn.png" alt="" class="gamenextbtn">
 			</div>
