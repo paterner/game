@@ -298,16 +298,16 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   -webkit-background-size: 15.75px 105px;
 }
 .headerRight_h5 .headerRight span .weixin{
-  background-position: 3px -91px;
+  background-position: 5px -90px;
 }
 .headerRight_h5 .headerRight span .weibo{
-  background-position: 3px -55px;
+  background-position: 4px -53px;
 }
 .headerRight_h5 .headerRight span .baidu{
   background-position: 4px -24px;
 }
 .headerRight_h5 .headerRight span .QQ{
-  background-position: 4px 3px;
+  background-position: 5px 4px;
 }
 .mb5{margin-bottom: 5px;}
 
@@ -524,18 +524,24 @@ animation: fly 1s forwards linear;
   position: fixed;
   top: 20%;
   right: 0;
+  width: 164px;
+  height: 35px;
+  background: url(../img/gameh5title.png) no-repeat;
+  background-size: 164px 35px;
+  -webkit-background-size: 164px 35px;
 }
-
-.fixed span{
-  float: left;
-  background: #285168;
+.fixed a {
+  display: inline-block;
+  font-size: 15px;
   color: #fff;
-  font-size: 15px;
-  padding: 10px
+  height: 35px;
+  line-height: 35px;
 }
-
-.fixed span.border{
-  color: #347eab;
-  font-weight: bold;
-  font-size: 15px;
+.fixed a:first-child {
+  width: 92px;
+  text-align: center;
+}
+.fixed a:last-child {
+  width: 62px;
+  text-indent: 10px;
 }
