@@ -184,11 +184,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 }
 
 .gameIntro1{
-  width: 92%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 6;
+  width: 100%;
 }
 
 .gameNetBg {
@@ -216,11 +212,8 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   width: 100%;
 }
 .gameIntro2{
-  width: 90.6%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 6;
+  width: 100%;
+margin-top: -130px;
 }
 .gameInfo {
   width: 38.4%;
@@ -298,16 +291,16 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   -webkit-background-size: 19.75px 107px;
 }
 .headerRight_h5 .headerRight span .weixin{
-  background-position: 5px -90px;
+  background-position: 3px -91px;
 }
 .headerRight_h5 .headerRight span .weibo{
-  background-position: 4px -53px;
+  background-position: 3px -54px;
 }
 .headerRight_h5 .headerRight span .baidu{
   background-position: 4px -24px;
 }
 .headerRight_h5 .headerRight span .QQ{
-  background-position: 5px 4px;
+  background-position: 4px 4px;
 }
 .mb5{margin-bottom: 5px;}
 
