@@ -188,7 +188,6 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 }
 .gametitleh5{
   width: 35.7%;
-  opacity: 1!important;
 }
 
 .gameIntro1{
@@ -347,7 +346,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 }
 
 .gametitleh5.gametitle_h5_one{
-  width: 22%;
+  width: 30%;
 }
 
 .gametitleh5.gametitle_h5_two{
