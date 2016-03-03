@@ -180,11 +180,19 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 
 .gametitle{
   width: 35.7%;
-  margin-top: 100px
+  position: absolute;
+  bottom: 11.2%;
+  left: 50%;
+  margin-left: -17.8%;
+  z-index: 10;
 }
 
 .gameIntro1{
-  width: 100%;
+  width: 86%;
+  position: absolute;
+  left: 0;
+  top: 19.7%;
+  z-index: 10;
 }
 
 .gameNetBg {
@@ -212,8 +220,11 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   width: 100%;
 }
 .gameIntro2{
-  width: 100%;
-margin-top: -130px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 84.6%;
+  z-index: 10;
 }
 .gameInfo {
   width: 38.4%;
