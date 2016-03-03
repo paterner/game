@@ -294,8 +294,8 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   width: 21px;
   height: 21px;
   margin: 5px 4px 0px 0px;
-  background-size: 15.75px 105px;
-  -webkit-background-size: 15.75px 105px;
+  background-size: 19.75px 107px;
+  -webkit-background-size: 19.75px 107px;
 }
 .headerRight_h5 .headerRight span .weixin{
   background-position: 3px -91px;
@@ -307,7 +307,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   background-position: 4px -24px;
 }
 .headerRight_h5 .headerRight span .QQ{
-  background-position: 4px 3px;
+  background-position: 4px 4px;
 }
 .mb5{margin-bottom: 5px;}
 
