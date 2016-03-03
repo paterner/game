@@ -186,6 +186,10 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   margin-left: -17.8%;
   z-index: 10;
 }
+.gametitleh5{
+  width: 35.7%;
+  opacity: 1!important;
+}
 
 .gameIntro1{
   width: 86%;
@@ -338,19 +342,19 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   opacity: 1
 }
 
-.gametitle.gamelogo_h5{
+.gametitleh5.gamelogo_h5{
   margin-top: 0;
 }
 
-.gametitle.gametitle_h5_one{
+.gametitleh5.gametitle_h5_one{
   width: 22%;
 }
 
-.gametitle.gametitle_h5_two{
+.gametitleh5.gametitle_h5_two{
   width: 90%
 }
 
-.gametitle.gametitle_h5_three{
+.gametitleh5.gametitle_h5_three{
   width: 90%
 }
 
