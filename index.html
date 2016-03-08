@@ -11,14 +11,18 @@
 <div class="header">
 	<div class="headerRight clearfix">
 		<img src="img/gamelogo.png" alt="战舰世界" class="gamelogo">
-		<a href="###" class="fr gotoindex"><img src="img/gameIndexBtn.png"></a>
-		<a href="###" class="fr"><img src="img/luntan.png"></a>
+		<a href="http://dhz.kongzhong.com/index.html" class="fr gotoindex" target="_blank"><img src="img/gameIndexBtn.png"></a>
+		<a href="http://bbs.kongzhong.com/forum.php?mod=forumdisplay&fid=347" class="fr" target="_blank"><img src="img/luntan.png"></a>
 		<div class="fr pr">
 			<span>关注我们：</span>
 			<span class="socialIcon wx"><a class="weixin"></a></span>
 			<span class="socialIcon wb"><a class="weibo"></a></span>
 			<span class="socialIcon qq"><a class="QQ"></a></span>
-			<img src="img/gameCode2.jpg" class="code2">
+			<div class="code2">
+				<img src="img/gameCode2.jpg" class="code_wx">
+				<img src="img/gameCode3.jpg" class="code_wb">
+				<img src="img/gameCode4.jpg" class="code_qq">
+			</div>
 		</div>
 	</div>
 </div>
@@ -35,18 +39,20 @@
 		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
 	</div>
 	<div class="page page1">
-		<img src="img/gameInfo.png" alt="" class="gameInfo">
-		<div class="page2-bottom clearfix">
-			<a href="###"><img src="img/gameTag.png" alt=""><span>模型</span></a>
-			<a href="###"><img src="img/gameTag.png" alt=""><span>充值卡</span></a>
-			<a href="###"><img src="img/gameTag.png" alt=""><span>鼠标垫</span></a>
-			<a href="###"><img src="img/gameTag.png" alt=""><span>游戏礼包</span></a>
+		<div class="black_bg">
+			<img src="img/gameInfo.png" alt="" class="gameInfo">
+			<div class="page2-bottom clearfix">
+				<a href="###"><img src="img/moxing.jpg" alt=""><span>模型</span></a>
+				<a href="###"><img src="img/czk.jpg" alt=""><span>充值卡</span></a>
+				<a href="###"><img src="img/sbd.jpg" alt=""><span>鼠标垫</span></a>
+				<a href="###"><img src="img/yxlb.jpg" alt=""><span>游戏礼包</span></a>
+			</div>
+			<div class="page2-weixin">
+				<img src="img/gameWeixincode.png" alt="">
+			</div>
+			<img src="img/gameNetBg.png" alt="" class="gameNetBg">
+			<a class="gamePreBtn">回到顶部<!-- <img src="img/gamePreBtn.png" alt=""> --></a>
 		</div>
-		<div class="page2-weixin">
-			<img src="img/gameWeixincode.png" alt="">
-		</div>
-		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
-		<a class="gamePreBtn"><img src="img/gamePreBtn.png" alt=""></a>
 	</div>
 </div>
 </body>
@@ -57,29 +63,34 @@ $(function(){
 	$('.main').onepage_scroll({
 		sectionContainer: '.page',
 		pagination: false,
+		animationTime: 500,
 	});
 	$('.socialIcon').on('mouseover', function() {
 		var $this = $(this);
 		$this.addClass('over');
 		if($this.hasClass('wx')) {
-			$('.code2').css('left', '45px').show();	
+			$('.code2').css('left', '45px');
+			$('.code_wx').show();
 		}
 		else if($this.hasClass('qq')) {
-			$('.code2').css('left', '126px').show();
+			$('.code2').css('left', '126px');
+			$('.code_qq').show();
 		}
 		else if($this.hasClass('wb')) {
-			$('.code2').css('left', '92px').show();
+			$('.code2').css('left', '92px');
+			$('.code_wb').show();
 		}
 	}).on('mouseout', function() {
 		$(this).removeClass('over');
-		$('.code2').hide();
+		$('.code2').find('img').hide();
 	});
 
 	$('.gameNextBtn').click(function(){
 		$('.main').moveDown();
 	})
 	$('.gamePreBtn').click(function(){
-		$('.main').moveUp();
+		$('.main').moveBack();
+		// $('.main').moveUp();
 	})
 });
 </script>

@@ -20,8 +20,8 @@
 			<img src="img/gameCode2.jpg" class="code2">
 		</div> -->
 		<div class="fixed">
-			<a href="###">进入官网</a>
-			<a href="###">论坛</a>
+			<a href="http://dhz.kongzhong.com/index.html">进入官网</a>
+			<a href="http://bbs.kongzhong.com/forum.php?mod=forumdisplay&fid=347">论坛</a>
 		</div>
 	</div>
 </div>
@@ -51,16 +51,18 @@
 			<div class="page3_bg"></div>
 			<img src="img/gameInfoH5.png" alt="" class="gameinfoh5">
 			<div class="clearfix h5Info">
-				<a href="###"><img src="img/gameTag.png" alt=""><span>模型</span></a>
-				<a href="###"><img src="img/gameTag.png" alt=""><span>充值卡</span></a>
-				<a href="###"><img src="img/gameTag.png" alt=""><span>鼠标垫</span></a>
-				<a href="###"><img src="img/gameTag.png" alt=""><span>游戏礼包</span></a>
+				<a href="###"><img src="img/moxing.jpg" alt=""><span>模型</span></a>
+				<a href="###"><img src="img/czk.jpg" alt=""><span>充值卡</span></a>
+				<a href="###"><img src="img/sbd.jpg" alt=""><span>鼠标垫</span></a>
+				<a href="###"><img src="img/yxlb.jpg" alt=""><span>游戏礼包</span></a>
 			</div>
 			<div class="page3_h5_weixin">
 				<img src="img/gameWeixin.png" alt="">
 			</div>
-			<div>
-				<img src="img/gamePreBtn.png" alt="" class="gameprebtn">
+			<div class="goback">
+				<!-- <img src="img/gameNextBtn.png" alt="" class="gamenextbtn"> -->
+				<!-- <img src="img/gamePreBtn.png" alt="" class="gameprebtn"> -->
+				<span id="gamenextbtn">回到顶部</span>
 			</div>
 		</div>
 	</div>
@@ -104,6 +106,7 @@ $(function(){
 	$('.main').onepage_scroll({
 		sectionContainer: '.page',
 		pagination: false,
+		animationTime: 500,
 		afterMove: function(index){
 			if(index===1){
 				$('.game_fly').css('opacity', 0)
@@ -125,9 +128,15 @@ $(function(){
 	$('.gamenextbtn').click(function(){
 		$('.main').moveDown();
 	})
+	$('#gamenextbtn').click(function(){
+		$('.main').moveDown(true);
+	})
 	$('.gameprebtn').click(function(){
 		$('.main').moveUp();
 	})
+	// $('.page').on('touchstar', function(e) {
+	// 	event.preventDefault();
+	// });
 });
 </script>
 </html>

@@ -240,12 +240,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   top: 51.3%;
   z-index: 6;
 }
-.gamePreBtn {
-  width: 150px;
-  margin-left: -75px;
-  font-size: 30px;
-  color: #fff;
-}
+
 .page2-bottom{
   width: 520px;
   height: 210px;
@@ -564,12 +559,3 @@ animation: fly 1s forwards linear;
   z-index: 1
 }
 .black_bg{width:100%;background:url(../img/ba_1.png);height:350px;margin-top:23%;}
-.goback {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-.goback span{
-  font-size: 15px;
-  color: #fff;
-}
