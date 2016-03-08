@@ -573,3 +573,161 @@ animation: fly 1s forwards linear;
   font-size: 15px;
   color: #fff;
 }
+/* index2 */
+.page_2 {
+  background-image: url('../img/gamebgindex2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+.gametitle2 {
+  width: 52%;
+  position: absolute;
+  bottom: 11.2%;
+  left: 50%;
+  margin-left: -26%;
+  z-index: 10;
+}
+.gameTequan {
+  width: 58%;
+  position: absolute;
+  top: 29.5%;
+  left: 50%;
+  margin-left: -29%;
+}
+.page_2-bottom {
+  width: 58%;
+  position: absolute;
+  left: 50%;
+  margin-left: -29%;
+  top: 50%;
+  z-index: 6;
+}
+.page_2-bottom a {
+  float: left;
+  width: 48%;
+  margin-right: 2%;
+  margin-bottom: 15px;
+  position: relative;
+}
+.page_2-bottom a:nth-child(2n+2) {
+  margin-right: 0;
+}
+.page_2-bottom a img {
+  width: 100%;
+}
+.page_2-bottom a span {
+  display: block;
+  position: absolute;
+  right: 6px;
+  bottom: 8px;
+  width: 115px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  text-indent: 15px;
+  color: #fff;
+  font-size: 16px;
+  background: url(../img/gameTagName.png) no-repeat;
+  background-size: 115px 35px;
+}
+.gameZhongguo {
+  width: 48%;
+  position: absolute;
+  left: 50%;
+  margin-left: -28.5%;
+  top: 29%;
+}
+.page_3-bottom {
+  width: 57%;
+  position: absolute;
+  left: 50%;
+  margin-left: -28.5%;
+  top: 34%;
+  z-index: 10;
+}
+.page_3-bottom .gamePage3Bottom {
+  width: 100%;
+  height: 360px;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  border: 3px solid #717e84;
+  background-color: rgba(19, 21, 26, .9);
+  box-shadow:0 0 10px 5px #000; 
+  -webkit-box-shadow:0 0 10px 5px #000; 
+}
+.page_3-bottom .gamePage3Bottom .left-img {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.page_3-bottom .gamePage3Bottom .right-list {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.page_3-bottom .gamePage3Bottom .right-list li {
+  width: 100%;
+  height: 25%;
+  background-color: #050608;
+  position: relative;
+  cursor: pointer;
+}
+.page_3-bottom .gamePage3Bottom .right-list li.current:after {
+  display: block;
+  content: '';
+  width: 120%;
+  height: 100%;
+  background: url(../img/gameBottomTab.png);
+  background-size: 120% 100%;
+  -webkit-background-size: 120% 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+.page_3-bottom .gamePage3Bottom .right-list li img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 11;
+}
+.page_3-bottom .boat-name {
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+}
+.new-code2 {
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+.onepage-pagination {
+  z-index: 99;
+}
+.onepage-pagination li a{
+  width: 20px;
+  height: 20px;
+  background: url(../img/pagination.png) no-repeat;
+  background-size: 20px 20px;
+  -webkit-background-size: 20px 20px;
+  position: relative;
+  z-index: 99;
+  margin-bottom: 10px;
+}
+.onepage-pagination li a.active {
+  background: url(../img/pagination_on.png) no-repeat;
+  background-size: 20px 20px;
+  -webkit-background-size: 20px 20px;
+}
+.onepage-pagination li a:before {
+  display: none;
+}

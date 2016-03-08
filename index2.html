@@ -24,35 +24,42 @@
 				<img src="img/gameCode4.jpg" class="code_qq">
 			</div>
 		</div>
+		<img src="img/gameCode5.png" alt="" class="new-code2">
 	</div>
 </div>
 <div class="main">
-	<div class="page page1">
-		<img src="img/gametitle.png" alt="" class="gametitle">
+	<div class="page page_2">
+		<img src="img/gametitle2.png" alt="" class="gametitle2">
 		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
 		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
 	</div>
-	<div class="page page1">
-		<img src="img/gameIntro1.png" alt="" class="gameIntro1">
-		<img src="img/gameIntro2.png" alt="" class="gameIntro2">
-		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
-		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
-	</div>
-	<div class="page page1">
-		<div class="black_bg">
-			<img src="img/gameInfo.png" alt="" class="gameInfo">
-			<div class="page2-bottom clearfix">
-				<a href="###"><img src="img/moxing.jpg" alt=""><span>模型</span></a>
-				<a href="###"><img src="img/czk.jpg" alt=""><span>充值卡</span></a>
-				<a href="###"><img src="img/sbd.jpg" alt=""><span>鼠标垫</span></a>
-				<a href="###"><img src="img/yxlb.jpg" alt=""><span>游戏礼包</span></a>
-			</div>
-			<div class="page2-weixin">
-				<img src="img/gameWeixincode.png" alt="">
-			</div>
-			<img src="img/gameNetBg.png" alt="" class="gameNetBg">
-			<a class="gamePreBtn">回到顶部<!-- <img src="img/gamePreBtn.png" alt=""> --></a>
+	<div class="page page_2">
+		<img src="img/gameTequan.png" alt="" class="gameTequan">
+		<div class="page_2-bottom clearfix">
+			<a href="###"><img src="img/gameTag5.png" alt=""><span>特别标识</span></a>
+			<a href="###"><img src="img/gameTag5.png" alt=""><span>每日礼包</span></a>
+			<a href="###"><img src="img/gameTag5.png" alt=""><span>海量银币</span></a>
+			<a href="###"><img src="img/gameTag5.png" alt=""><span>稀有道具</span></a>
 		</div>
+		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
+		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
+	</div>
+	<div class="page page_2">
+		<img src="img/gameZhongguo.png" alt="" class="gameZhongguo">
+		<div class="page_3-bottom">
+			<div class="gamePage3Bottom">
+				<img src="img/gameboat1.png" alt="" class="left-img">
+				<ul class="right-list">
+					<li class="current"><img src="img/gameboat1.png" alt=""></li>
+					<li><img src="img/gameboat2.png" alt=""></li>
+					<li><img src="img/gameboat3.png" alt=""></li>
+					<li><img src="img/gameboat4.png" alt=""></li>
+				</ul>
+				<div class="boat-name">重庆号</div>
+			</div>
+		</div>
+		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
+		<a class="gamePreBtn">回到顶部</a>
 	</div>
 </div>
 </body>
@@ -62,7 +69,7 @@
 $(function(){
 	$('.main').onepage_scroll({
 		sectionContainer: '.page',
-		pagination: false,
+		pagination: true,
 		animationTime: 500,
 	});
 	$('.socialIcon').on('mouseover', function() {
@@ -92,6 +99,13 @@ $(function(){
 		$('.main').moveBack();
 		// $('.main').moveUp();
 	})
+	$('.right-list').find('li').on('mouseover', function() {
+		if($(this).hasClass('current')) {
+			return false;
+		}
+		$(this).addClass('current').siblings('li').removeClass('current');
+		$('.left-img').attr('src', $(this).find('img').attr('src'));
+	});
 });
 </script>
 </html>
