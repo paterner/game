@@ -139,6 +139,13 @@ $(function(){
 	// $('.page').on('touchstar', function(e) {
 	// 	event.preventDefault();
 	// });
+	$('.right-list').find('li').on('click', function() {
+		if($(this).hasClass('current')) {
+			return false;
+		}
+		$(this).addClass('current').siblings('li').removeClass('current');
+		$('.left-img').attr('src', $(this).find('img').attr('src'));
+	});
 });
 </script>
 </html>
