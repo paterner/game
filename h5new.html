@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+<title>game</title>
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/game.css" />
+</head>
+
+<body>
+<div class="header headerRight_h5">
+	<div class="headerRight clearfix">
+		<img src="img/gamelogoh5.png" alt="战舰世界" class="gamelogo gamelogo_h5">
+		<!-- <div class="fr">	
+			<span>关注我们：</span>
+			<span class="socialIcon wx"><a class="weixin"></a></span>
+			<span class="socialIcon"><a class="weibo"></a></span>
+			<span class="socialIcon"><a class="QQ"></a></span>
+			<img src="img/gameCode2.jpg" class="code2">
+		</div> -->
+		<div class="fixed">
+			<a href="http://dhz.kongzhong.com/index.html">进入官网</a>
+			<a href="http://bbs.kongzhong.com/forum.php?mod=forumdisplay&fid=347">论坛</a>
+		</div>
+	</div>
+</div>
+<div class="main">
+	<div class="page page1_h5">
+		<div class="mb5">
+			<img src="img/h5_title.png" alt="" class="gametitleh5 gamelogo_h5 gametitle_h5_one">
+			<img src="img/h5_title2.png" alt="" class="gametitleh5 gamelogo_h5 gametitle_h5_two">
+			<img src="img/h5_title3.png" alt="" class="gametitleh5 gamelogo_h5 gametitle_h5_three">
+			<div>
+				<img src="img/gameNextBtn.png" alt="" class="gamenextbtn">
+			</div>
+		</div>
+	</div>
+	<div class="page page2_h5">
+		<div class="page3_h5_list">
+			<img src="img/gamelistTitle.png" alt="">
+			<div class="clearfix h5Info">
+				<a href="###"><img src="img/moxing.jpg" alt=""><span>模型</span></a>
+				<a href="###"><img src="img/czk.jpg" alt=""><span>充值卡</span></a>
+				<a href="###"><img src="img/sbd.jpg" alt=""><span>鼠标垫</span></a>
+				<a href="###"><img src="img/yxlb.jpg" alt=""><span>游戏礼包</span></a>
+			</div>
+			<div>
+				<img src="img/gameNextBtn.png" alt="" class="gamenextbtn">
+			</div>
+		</div>
+	</div>
+	<div class="page page3_h5">
+		<div class="mb5">
+			<div>
+				<img src="img/gameTitleNew.png" alt="" class="gameTitleNew">
+				<div class="page_3-bottom page_3-bottom-h5">
+					<div class="gamePage3Bottom">
+						<img src="img/gameboat1.png" alt="" class="left-img">
+						<ul class="right-list">
+							<li class="current"><img src="img/gameboat1.png" alt=""></li>
+							<li><img src="img/gameboat2.png" alt=""></li>
+							<li><img src="img/gameboat3.png" alt=""></li>
+							<li><img src="img/gameboat4.png" alt=""></li>
+						</ul>
+						<div class="boat-name">重庆号</div>
+					</div>
+				</div>
+			</div>
+			<div class="goback">
+				<!-- <img src="img/gameNextBtn.png" alt="" class="gamenextbtn"> -->
+				<!-- <img src="img/gamePreBtn.png" alt="" class="gameprebtn"> -->
+				<span id="gamenextbtn">回到顶部</span>
+			</div>
+		</div>
+	</div>
+</div>
+<img src="img/gameWeixin.png" alt="" class="page3_h5_weixin">
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery.onepage-scroll.min.js"></script>
+<script>
+$(function(){
+	//预加载所有图片
+	var imgsrc = ['h5_page1.jpg','h5_page2.jpg','h5_page3.jpg','gamelogo.png','gameIndexBtn.png','h5_title.png','h5_title2.png','h5_title3.png','gameNextBtn.png','gameIntro1.png','gameIntro2.png','gameInfoH5.png','gameTag1.png','gameTag2.png','gameTag3.png','gameTag4.png','gameWeixin.png','gamePreBtn.png','gameSocialIcon.png'],imgscount = imgsrc.length,imgsnow = 0,imgobj = [];
+	for(var i = 0;i<imgscount;i++){
+		imgobj[i] = new Image();
+		imgobj[i].onload =function(){
+			imgsnow++;
+			if(imgsnow == imgscount){
+				pageAnimation();
+			}
+		}
+		imgobj[i].onerror =function(){
+			imgsnow++;
+			if(imgsnow == imgscount){
+				pageAnimation();
+			}
+		}	
+		imgobj[i].src = "http://"+window.location.host+window.location.pathname.replace(/[^\/]*$/,"")+"images/"+imgsrc[i];
+	}
+	function pageAnimation() {
+		$('.gametitleh5, .gemeindexbtn').css('opacity', 1)
+		$('.gametitle_h5_one').addClass('animate_one');
+		$('.gametitle_h5_two').addClass('animate_two');
+		$('.gametitle_h5_three').addClass('animate_three');
+	}
+	function removeClass() {
+		$('.gametitleh5, .gemeindexbtn').css('opacity', 0)
+		$('.gametitle_h5_one').removeClass('animate_one');
+		$('.gametitle_h5_two').removeClass('animate_two');
+		$('.gametitle_h5_three').removeClass('animate_three');
+	}
+	$('.main').onepage_scroll({
+		sectionContainer: '.page',
+		pagination: false,
+		animationTime: 500,
+		afterMove: function(index){
+			if(index===1){
+				$('.game_fly').css('opacity', 0)
+				$('.game_fly').removeClass('fly')
+				pageAnimation()
+			}else{
+				removeClass()
+				$('.game_fly').css('opacity', 0)
+				$('.game_fly').removeClass('fly')
+			}
+		},
+	});
+	$('.gamenextbtn').click(function(){
+		$('.main').moveDown();
+	})
+	$('#gamenextbtn').click(function(){
+		$('.main').moveDown(true);
+	})
+	$('.gameprebtn').click(function(){
+		$('.main').moveUp();
+	})
+	// $('.page').on('touchstar', function(e) {
+	// 	event.preventDefault();
+	// });
+});
+</script>
+</html>
