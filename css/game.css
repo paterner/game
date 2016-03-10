@@ -784,3 +784,60 @@ animation: fly 1s forwards linear;
   left: 20px;
   font-size: 14px;
 }
+
+/*world_h5*/
+.world_next_btn{margin: 0 auto}
+.world_next_btn img{display: block;margin: 0 auto}
+.world_next_btn img.next_detail{width: 50%;margin-bottom: 15px;}
+
+.world_h5 .page3_h5_weixin{
+    /*background-image: url('../img/gameWeixin2.png');
+    background-size: 111px 150px;*/
+    /*background-repeat: no-repeat;*/
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 111px;
+    margin: 0 auto;
+    height: 150px;
+}
+.page3_h5_weixin a{
+  position: absolute;
+  width: 111px;
+  height: 30px;
+  left: 0;
+  bottom: 10px
+}
+.page3_h5_weixin .code2 {
+  position: absolute;
+  width: 111px;
+  height: 150px;
+  top: 0;
+  left: 0;
+}
+/*.page3_h5_weixin a:last-child{
+  position: absolute;
+  right: 20px;
+  top: 73px
+}*/
+.page3_h5_weixin a img{
+  width: 100px;
+}
+.world_h5 .page1_h5{
+  -webkit-flex-direction:column;
+  flex-direction:column;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  padding-top: 140px;
+  box-sizing: border-box;
+}
+
+.world_h5 .page3_h5 .page3_h5_list img{
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.world_h5 .page3_h5 .page3_h5_list img.gameinfoh5{
+  width: 70%;
+}
