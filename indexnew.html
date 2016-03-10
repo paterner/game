@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>game</title>
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/game.css" />
+</head>
+
+<body>
+<div class="header">
+	<div class="headerRight clearfix">
+		<img src="img/gamelogo.png" alt="战舰世界" class="gamelogo">
+		<a href="http://dhz.kongzhong.com/index.html" class="fr gotoindex" target="_blank"><img src="img/gameIndexBtn.png"></a>
+		<a href="http://bbs.kongzhong.com/forum.php?mod=forumdisplay&fid=347" class="fr" target="_blank"><img src="img/luntan.png"></a>
+		<div class="fr pr">
+			<span>关注我们：</span>
+			<span class="socialIcon wx"><a class="weixin"></a></span>
+			<span class="socialIcon wb"><a class="weibo"></a></span>
+			<span class="socialIcon qq"><a class="QQ"></a></span>
+			<div class="code2">
+				<img src="img/gameCode2.jpg" class="code_wx">
+				<img src="img/gameCode3.jpg" class="code_wb">
+				<img src="img/gameCode4.jpg" class="code_qq">
+			</div>
+		</div>
+		<img src="img/gameCode5.png" alt="" class="new-code2">
+	</div>
+</div>
+<div class="main">
+	<div class="page page_2">
+		<img src="img/gametitle2.png" alt="" class="gametitle2">
+		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
+		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
+	</div>
+	<div class="page page_2">
+		<img src="img/gameTequan.png" alt="" class="gameTequan">
+		<div class="page_2-bottom clearfix">
+			<a href="###"><img src="img/gameTag5.png" alt=""><span>特别标识</span></a>
+			<a href="###"><img src="img/gameTag5.png" alt=""><span>每日礼包</span></a>
+			<a href="###"><img src="img/gameTag5.png" alt=""><span>海量银币</span></a>
+			<a href="###"><img src="img/gameTag5.png" alt=""><span>稀有道具</span></a>
+		</div>
+		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
+		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
+	</div>
+	<div class="page page_2">
+		<img src="img/gameZhongguo.png" alt="" class="gameZhongguo">
+		<div class="page_3-bottom">
+			<div class="gamePage3Bottom">
+				<img src="img/gameboat1.png" alt="" class="left-img">
+				<ul class="right-list">
+					<li class="current"><img src="img/gameboat1.png" alt=""></li>
+					<li><img src="img/gameboat2.png" alt=""></li>
+					<li><img src="img/gameboat3.png" alt=""></li>
+					<li><img src="img/gameboat4.png" alt=""></li>
+				</ul>
+				<div class="boat-name">重庆号</div>
+			</div>
+		</div>
+		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
+		<a class="gamePreBtn">回到顶部</a>
+	</div>
+</div>
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery.onepage-scroll.min.js"></script>
+<script>
+$(function(){
+	$('.main').onepage_scroll({
+		sectionContainer: '.page',
+		pagination: true,
+		animationTime: 500,
+	});
+	$('.socialIcon').on('mouseover', function() {
+		var $this = $(this);
+		$this.addClass('over');
+		if($this.hasClass('wx')) {
+			$('.code2').css('left', '45px');
+			$('.code_wx').show();
+		}
+		else if($this.hasClass('qq')) {
+			$('.code2').css('left', '126px');
+			$('.code_qq').show();
+		}
+		else if($this.hasClass('wb')) {
+			$('.code2').css('left', '92px');
+			$('.code_wb').show();
+		}
+	}).on('mouseout', function() {
+		$(this).removeClass('over');
+		$('.code2').find('img').hide();
+	});
+
+	$('.gameNextBtn').click(function(){
+		$('.main').moveDown();
+	})
+	$('.gamePreBtn').click(function(){
+		$('.main').moveBack();
+		// $('.main').moveUp();
+	})
+	$('.right-list').find('li').on('mouseover', function() {
+		if($(this).hasClass('current')) {
+			return false;
+		}
+		$(this).addClass('current').siblings('li').removeClass('current');
+		$('.left-img').attr('src', $(this).find('img').attr('src'));
+	});
+});
+</script>
+</html>
