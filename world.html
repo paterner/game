@@ -33,8 +33,8 @@
 			<img src="img/h5_title3.png" alt="" class="gametitleh5 gamelogo_h5 gametitle_h5_two">
 		</div>
 		<div class="page3_h5_weixin">
-			<a href=""><img src="img/h5_ios_download.png" alt=""></a>
-			<a href=""><img src="img/h5_android_download.png" alt=""></a>
+			<img src="img/gameWeixin2.png" alt="" class="code2">
+			<a href="###"></a>
 		</div>
 		<div class="world_next_btn">
 			<img src="img/next_detail.png" alt="" class="next_detail">
@@ -76,9 +76,10 @@
 </div>
 </body>
 <script src="js/jquery-1.9.0.min.js"></script>
-<script src="js/jquery.onepage-scroll.min.js"></script>
+<script src="js/jquery.onepage-scroll.js"></script>
 <script>
 $(function(){
+	$('body').hide();
 	//预加载所有图片
 	var imgsrc = ['h5_page1.jpg','h5_page2.jpg','h5_page3.jpg','gamelogo.png','gameIndexBtn.png','h5_title.png','h5_title2.png','h5_title3.png','gameNextBtn.png','gameIntro1.png','gameIntro2.png','gameInfoH5.png','gameTag1.png','gameTag2.png','gameTag3.png','gameTag4.png','gameWeixin.png','gamePreBtn.png','gameSocialIcon.png'],imgscount = imgsrc.length,imgsnow = 0,imgobj = [];
 	for(var i = 0;i<imgscount;i++){
@@ -86,16 +87,18 @@ $(function(){
 		imgobj[i].onload =function(){
 			imgsnow++;
 			if(imgsnow == imgscount){
+				$('body').show();
 				pageAnimation();
 			}
 		}
 		imgobj[i].onerror =function(){
 			imgsnow++;
 			if(imgsnow == imgscount){
+				$('body').show();
 				pageAnimation();
 			}
 		}	
-		imgobj[i].src = "http://"+window.location.host+window.location.pathname.replace(/[^\/]*$/,"")+"images/"+imgsrc[i];
+		imgobj[i].src = "http://"+window.location.host+window.location.pathname.replace(/[^\/]*$/,"")+"img/"+imgsrc[i];
 	}
 	function pageAnimation() {
 		$('.gametitleh5, .gemeindexbtn').css('opacity', 1)

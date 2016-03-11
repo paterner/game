@@ -27,41 +27,36 @@
 	</div>
 </div>
 <div class="main">
-	<div class="page page1">
-		<img src="img/gametitle.png" alt="" class="gametitle">
-		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
-		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
-	</div>
-	<div class="page page1">
-		<img src="img/gameIntrotitle.png" alt="" class="gameIntro1">
-		<img src="img/gameIntro1.png" alt="" class="gameIntro1">
-		<img src="img/gameIntro2.png" alt="" class="gameIntro2">
-		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
-		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
-	</div>
-	<div class="page page1">
-		<img src="img/gameIntro3.png" alt="" class="gameIntro1">
-		<img src="img/gameIntro4.png" alt="" class="gameIntro1">
-		<img src="img/gameIntro5.png" alt="" class="gameIntro2">
-		<img src="img/gameIntro6.png" alt="" class="gameIntro2">
-		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
-		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
-	</div>
-	<div class="page page1">
-		<div class="black_bg">
-			<img src="img/gameInfo.png" alt="" class="gameInfo">
-			<div class="page2-bottom clearfix">
-				<a href="###"><img src="img/moxing.jpg" alt=""><span>模型</span></a>
-				<a href="###"><img src="img/czk.jpg" alt=""><span>充值卡</span></a>
-				<a href="###"><img src="img/sbd.jpg" alt=""><span>鼠标垫</span></a>
-				<a href="###"><img src="img/yxlb.jpg" alt=""><span>游戏礼包</span></a>
-			</div>
-			<div class="page2-weixin">
-				<img src="img/gameWeixincode.png" alt="">
-			</div>
-			<img src="img/gameNetBg.png" alt="" class="gameNetBg">
-			<a class="gamePreBtn">回到顶部<!-- <img src="img/gamePreBtn.png" alt=""> --></a>
+	<div class="page page_world">
+		<img src="img/gametitle.png" alt="" class="gametitle_world">
+		<div class="world_weixin">
+			<img src="img/gameWeixin3.png" alt="" class="code2">
+			<a href="###" class="ios_down"></a>
+			<a href="###" class="ios_android"></a>
 		</div>
+		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
+		<img src="img/next_detail_world.png" alt="" class="nextDetailWorld">
+		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
+	</div>
+	<div class="page page_world">
+		<img src="img/gameIntrotitle.png" alt="" class="gameIntrotitle">
+		<img src="img/gameIntro1.png" alt="" class="gameIntro1_new">
+		<img src="img/gameIntro2.png" alt="" class="gameIntro2_new">
+		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
+		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
+	</div>
+	<div class="page page_world">
+		<img src="img/gameIntro4.png" alt="" class="gameIntro4_new">
+		<img src="img/gameIntro5.png" alt="" class="gameIntro5_new">
+		<img src="img/gameIntro6.png" alt="" class="gameIntro6_new">
+		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
+		<a class="gameNextBtn"><img src="img/gameNextBtn.png" alt=""></a>
+	</div>
+	<div class="page page_world">
+		<img src="img/gameCode6.png" alt="" class="gamepage4_code">
+		<img src="img/gameLastTitle.png" alt="" class="gameLastTitle_new">
+		<img src="img/gameNetBg.png" alt="" class="gameNetBg">
+		<a class="gamePreBtn">回到顶部</a>
 	</div>
 </div>
 </body>
@@ -71,7 +66,7 @@
 $(function(){
 	$('.main').onepage_scroll({
 		sectionContainer: '.page',
-		pagination: false,
+		pagination: true,
 		animationTime: 500,
 	});
 	$('.socialIcon').on('mouseover', function() {

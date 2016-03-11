@@ -215,7 +215,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   display: block;
   position: absolute;
   left: 50%;
-  margin-top: -2.35%; 
+  margin-left: -2.35%; 
   width: 4.7%;
   cursor: pointer;
   bottom: 10px;
@@ -791,26 +791,35 @@ animation: fly 1s forwards linear;
 .world_next_btn img.next_detail{width: 50%;margin-bottom: 15px;}
 
 .world_h5 .page3_h5_weixin{
-    background-image: url('../img/gameWeixin.png');
-    background-size: 230px 125px;
-    background-repeat: no-repeat;
-    position: relative;
-    top: auto;
-    right: auto;
-    width: 230px;
-    margin: 0 auto;
-    height: 138px;
+  /*background-image: url('../img/gameWeixin2.png');
+  background-size: 111px 150px;*/
+  /*background-repeat: no-repeat;*/
+  position: relative;
+  top: auto;
+  right: auto;
+  width: 111px;
+  margin: 0 auto;
+  height: 150px;
 }
 .page3_h5_weixin a{
   position: absolute;
-  right: 20px;
-  top: 30px
+  width: 111px;
+  height: 30px;
+  left: 0;
+  bottom: 10px
 }
-.page3_h5_weixin a:last-child{
+.page3_h5_weixin .code2 {
+  position: absolute;
+  width: 111px;
+  height: 150px;
+  top: 0;
+  left: 0;
+}
+/*.page3_h5_weixin a:last-child{
   position: absolute;
   right: 20px;
   top: 73px
-}
+}*/
 .page3_h5_weixin a img{
   width: 100px;
 }
@@ -831,4 +840,99 @@ animation: fly 1s forwards linear;
 
 .world_h5 .page3_h5 .page3_h5_list img.gameinfoh5{
   width: 70%;
+}
+.gametitle_world {
+  width: 35.7%;
+  position: absolute;
+  top: 31.5%;
+  left: 50%;
+  margin-left: -17.8%;
+  z-index: 10;
+}
+.world_weixin {
+  position: absolute;
+  width: 462px;
+  height: 253px;
+  top: 52.6%;
+  left: 50%;
+  margin-left: -231px;
+  z-index: 11;
+}
+.world_weixin .ios_down,
+.world_weixin .ios_android {
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 60px;
+  top: 64px;
+  right: 40px;
+  z-index: 11;
+}
+.world_weixin .ios_android {
+  top: 145px;
+}
+.gameIntrotitle {
+  position: absolute;
+  width: 39.6%;
+  height: 9.3%;
+  top: 30%;
+  left: 21%;
+}
+.gameIntro1_new,
+.gameIntro2_new,
+.gameIntro6_new,
+.gameIntro4_new,
+.gameIntro5_new {
+  position: absolute;
+  width: 100%;
+  height: 24%;
+  left: 0;
+  top: 45%;
+  z-index: 11;
+}
+.gameIntro2_new {
+  top: 63%;
+}
+.gameIntro4_new {
+  top: 27.8%;
+}
+.gameIntro5_new {
+  top: 45%;
+}
+.gameIntro6_new {
+  top: 68%;
+}
+.gamepage4_code {
+  position: absolute;
+  width: 21.7%;
+  height: 25.2%;
+  top: 29.6%;
+  left: 50%;
+  margin-left: -10.8%;
+  z-index: 11;
+}
+.gameLastTitle_new {
+  position: absolute;
+  width: 50.8%;
+  height: 12%;
+  top: 63%;
+  left: 50%;
+  margin-left: -25.4%;
+  z-index: 11;
+}
+.page_world {
+  background-image: url('../img/gamebgindex2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+.nextDetailWorld {
+  position: absolute;
+  width: 9.7%;
+  height: 5%;
+  top: 86.5%;
+  left: 50%;
+  margin-left: -4.85%;
+  z-index: 10;
 }
